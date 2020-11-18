@@ -1,0 +1,42 @@
+body {
+  background-color: #fafafa;
+}
+.spacer{
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.gray_row{
+  background-color: #eeeeee;
+}
+
+.white_row{
+  background-color: white;
+}
+
+.task_text{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.date_text{
+  font-size: 0.7em;
+}
+
+.strike{
+  text-decoration: line-through;
+  color: gray;
+}
+
+.item_to_delete{
+    color: #fe6993;
+    background-color: #ffe6ed;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    line-height: 2em;
+}
+
+.custom-checkbox{
+    margin-top: -.1em;
+    width: 1.75em;
+    height: 1.75em;
+}

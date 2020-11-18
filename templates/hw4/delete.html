@@ -1,0 +1,31 @@
+<!--
+ Name: Alex Pohorylo
+ Date: 11/17/2020
+ This is the delete.html page for assignment-4 in CS 416.
+-->
+{% extends "tasks/../hw4/base.html" %}
+{% block body %}
+    <div class="card">
+        <div class="card-header">
+            Delete Task
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <p class="card-text  mb-3">Are you sure you want to delete <span class="item_to_delete">{{ item }}</span></p>
+                   </div>
+            </div>
+            <div class="row">
+                <form action="{% url 'index' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" value="{{ task.task }}" class="btn btn-info ml-3">No, Go Back</button>
+                </form>
+                <form action="{% url 'delete' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name="deleteItem" value="{{ item }}" class="btn btn-danger ml-1">Yes, delete
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
