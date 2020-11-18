@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             <div class="input-group mb-3">
                 <input type="text" name="addItem" class="form-control" placeholder="Add Tasks" aria-label="Add Tasks"
-                       aria-describedby="button-addon2">
+                >
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary bg-primary text-white" type="submit"
                             id="button-add">ADD
@@ -35,15 +35,20 @@
                     {% if not task.completed %}
                         <form action="{% url 'complete_task' %}" method="POST">
                             {% csrf_token %}
-                            <button type="submit" name="completeItem" value="{{ task.task }}" class="btn btn-success ml-3">Completed
+                            <button type="submit" name="completeItem" value="{{ task.task }}"
+                                    class="btn btn-success ml-3">Completed
                             </button>
                         </form>
                     {% endif %}
                     <form action="{% url 'update' %}" method="GET">
-                        <button type="submit" name="updateItem" value="{{ task.task }}" class="btn btn-primary mx-1">Update</button>
+                        <button type="submit" name="updateItem" value="{{ task.task }}" class="btn btn-primary mx-1">
+                            Update
+                        </button>
                     </form>
                     <form action="{% url 'delete' %}" method="GET">
-                        <button type="submit" name="deleteItem" value="{{ task.task }}" class="btn btn-danger mr-3">Delete</button>
+                        <button type="submit" name="deleteItem" value="{{ task.task }}" class="btn btn-danger mr-3">
+                            Delete
+                        </button>
                     </form>
                 </div>
             </div>
